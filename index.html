@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,7 @@
       background: rgba(255, 255, 255, 0.9);
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
       display: none;
     }
@@ -38,22 +39,23 @@
       background: white;
       padding: 1rem;
       border-radius: 0.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       min-width: 220px;
     }
   </style>
 </head>
+
 <body>
 
   <header class="bg-light border-bottom py-3 px-4 d-flex align-items-center justify-content-between">
-  <div class="d-flex align-items-center gap-3">
-    <img src="img/logo-ministerio.png" alt="Logo Ministerio" style="height: 60px;">
-    <div>
-      <h1 class="h4 mb-1 text-primary fw-bold">MINISTERIO DE SALUD - JUJUY</h1>
-      <h2 class="h6 mb-0 text-secondary">Mapa de Eventos - Familias en Situación de Riesgo</h2>
+    <div class="d-flex align-items-center gap-3">
+      <img src="img/logo-ministerio.png" alt="Logo Ministerio" style="height: 60px;">
+      <div>
+        <h1 class="h4 mb-1 text-primary fw-bold">MINISTERIO DE SALUD - JUJUY</h1>
+        <h2 class="h6 mb-0 text-secondary">Mapa de Eventos - Familias en Situación de Riesgo</h2>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <!-- Cargando -->
   <div id="loader" class="fw-bold">Cargando datos...</div>
@@ -80,6 +82,31 @@
     <button class="btn btn-primary w-100 mt-2" id="btnFiltrar">Aplicar</button>
     <button class="btn btn-secondary w-100 mt-2" id="btnReiniciar">Reiniciar filtros</button>
   </div>
+  <!-- Botón de alternar filtros -->
+  <button id="toggleFiltros" class="btn btn-primary position-absolute m-3 z-3" style="top: 10px; left: 10px;">
+    ☰ Filtros
+  </button>
+
+  <!-- Panel de filtros (ya existente) -->
+  <div id="filtros" class="shadow p-3 bg-white rounded position-absolute z-2 d-none"
+    style="top: 70px; left: 10px; width: 280px;">
+    style="top: 70px; left: 10px; width: 280px;">
+    <h6>Filtros</h6>
+    <div class="mb-2">
+      <label for="evento" class="form-label">Evento</label>
+      <select id="evento" class="form-select">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <div class="mb-2">
+      <label for="barrio" class="form-label">Barrio</label>
+      <select id="barrio" class="form-select">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <button class="btn btn-primary w-100 mt-2" id="btnFiltrar">Aplicar</button>
+    <button class="btn btn-secondary w-100 mt-2" id="btnReiniciar">Reiniciar filtros</button>
+  </div>
 
   <!-- Mapa -->
   <div id="map"></div>
@@ -91,4 +118,5 @@
   <!-- Script principal -->
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
