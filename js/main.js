@@ -132,13 +132,7 @@ document.getElementById('btnReiniciar').addEventListener('click', () => {
   document.getElementById('barrio').value = '';
   mostrarPuntos(datosOriginales.casas);
 });
-// Mostrar/Ocultar panel de filtros
-const btnToggle = document.getElementById('toggleFiltros');
-const panelFiltros = document.getElementById('filtros');
 
-btnToggle.addEventListener('click', () => {
-  panelFiltros.classList.toggle('d-none');
-});
 
 // Cargar al inicio
 cargarDatos();
