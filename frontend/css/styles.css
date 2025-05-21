@@ -1,0 +1,13 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#map {
+  height: 100vh; /* Hace que el mapa ocupe toda la ventana */
+}
+
+header {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
