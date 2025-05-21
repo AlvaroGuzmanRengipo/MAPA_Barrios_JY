@@ -132,7 +132,5 @@ document.getElementById('btnReiniciar').addEventListener('click', () => {
   document.getElementById('barrio').value = '';
   mostrarPuntos(datosOriginales.casas);
 });
-
-
 // Cargar al inicio
 cargarDatos();
